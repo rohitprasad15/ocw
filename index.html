@@ -145,11 +145,12 @@
   }
 
   h1 {
-    font-size: clamp(44px, 7vw, 84px);
+    font-size: clamp(40px, 6vw, 74px);
     font-weight: 380;
-    line-height: 1.02;
+    line-height: 1.04;
     letter-spacing: -0.025em;
-    max-width: 13ch;
+    max-width: 17ch;
+    text-wrap: balance;
     font-variation-settings: "opsz" 144, "SOFT" 50;
   }
   h1 em {
@@ -393,11 +394,12 @@
     </svg>
     <div class="wrap">
       <div class="kicker mono reveal d1">Open source · MIT · soft launch v0.1</div>
-      <h1 class="reveal d2">An AI coworker that lives on <em>your</em> desktop.</h1>
+      <h1 class="reveal d2">An AI coworker that doesn&rsquo;t just chat — it does <em>your</em> tasks.</h1>
       <p class="lede reveal d3">
-        Open Coworker is a free, open-source desktop app. Chat, work in your codebase,
-        or hand off a task and get a finished deliverable back — from an agent that runs
-        on your machine, keeps its memory there, and works with the model provider you choose.
+        Open Coworker is a free, open-source desktop app. It chats when you want to think —
+        but it can also answer your email and Slack messages, edit your files, and hand you
+        finished deliverables. All from an agent that runs on your machine, keeps its memory
+        there, and works with the model provider you choose.
       </p>
       <div class="cta-row reveal d4">
         <a class="btn primary" id="dl-mac" data-dl-mac href="#">
@@ -410,6 +412,7 @@
         </a>
       </div>
       <p class="cta-note reveal d4">
+        Bring your own API key — OpenAI, Anthropic, Google, and more — or run a local model with Ollama.<br />
         macOS 13+ (Apple silicon) · Windows 10+ · or <a data-repo href="#">run it from source</a>
       </p>
     </div>
