@@ -167,8 +167,10 @@
     color: var(--ink-soft);
   }
 
+  .cta-note.pre { margin-top: 30px; color: var(--ink-soft); }
+
   .cta-row {
-    margin-top: 44px;
+    margin-top: 14px;
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
@@ -394,12 +396,15 @@
     </svg>
     <div class="wrap">
       <div class="kicker mono reveal d1">Open source · MIT · soft launch v0.1</div>
-      <h1 class="reveal d2">An AI coworker that doesn&rsquo;t just chat, but <em>carries out your tasks</em></h1>
+      <h1 class="reveal d2">An AI coworker that doesn&rsquo;t just chat, but <em>carries out tasks</em></h1>
       <p class="lede reveal d3">
         Open Coworker is a free desktop app that actually gets work done. It goes beyond
         chat to manage your emails, reply to Slack threads, and edit files on your machine.
         You get finished deliverables from a local agent that keeps your memory private
         and runs on the model provider of your choice.
+      </p>
+      <p class="cta-note pre reveal d4">
+        Bring your own API key — OpenAI, Anthropic, Google, and more — or run a local model with Ollama.
       </p>
       <div class="cta-row reveal d4">
         <a class="btn primary" id="dl-mac" data-dl-mac href="#">
@@ -412,7 +417,6 @@
         </a>
       </div>
       <p class="cta-note reveal d4">
-        Bring your own API key — OpenAI, Anthropic, Google, and more — or run a local model with Ollama.<br />
         macOS 13+ (Apple silicon) · Windows 10+ · or <a data-repo href="#">run it from source</a>
       </p>
     </div>
