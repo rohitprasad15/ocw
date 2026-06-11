@@ -8,7 +8,7 @@
 <link rel="icon" type="image/png" href="../assets/icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,50&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,50&family=IBM+Plex+Mono:wght@400;500&family=Open+Sans:wght@400..700&display=swap" rel="stylesheet" />
 <style>
   :root {
     --paper: #f6f1e7;
@@ -20,6 +20,7 @@
     --cobalt-deep: #1f4cc0;
     --hairline: rgba(25, 23, 18, 0.18);
     --serif: "Fraunces", Georgia, serif;
+    --sans: "Open Sans", "Helvetica Neue", Arial, sans-serif;
     --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
   }
 
@@ -97,11 +98,11 @@
   .kicker::before { content: "✳"; font-size: 14px; letter-spacing: 0; }
 
   h1 {
-    font-size: clamp(36px, 5vw, 56px);
-    font-weight: 380;
-    line-height: 1.06;
-    letter-spacing: -0.02em;
-    font-variation-settings: "opsz" 144, "SOFT" 50;
+    font-family: var(--sans);
+    font-size: clamp(36px, 5vw, 54px);
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
   }
 
   .meta {
@@ -122,9 +123,10 @@
 
   .doc h2 {
     margin-top: 52px;
-    font-size: 26px;
-    font-weight: 460;
-    letter-spacing: -0.01em;
+    font-family: var(--sans);
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.015em;
     line-height: 1.2;
   }
   .doc h2 .num {
