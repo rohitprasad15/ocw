@@ -443,7 +443,7 @@
         </a>
       </div>
       <p class="cta-note reveal d4">
-        macOS 13+ (Apple silicon) · Windows 10+ · or <a data-repo href="#">run it from source</a>
+        By downloading, you agree to the <a href="terms/">Terms of Service</a>.
       </p>
     </div>
   </section>
@@ -485,10 +485,9 @@
       <div class="terminal" aria-label="Run from source">
         <div class="t-bar"><span></span><span></span><span></span></div>
         <div><span class="c"># prefer source over installers?</span></div>
-        <div><span class="p">$</span> git clone <a data-repo-clone href="#">https://github.com/rohitprasad15/ocw</a>.git</div>
-        <div><span class="p">$</span> cd open-coworker</div>
-        <div><span class="p">$</span> pip install -e . <span class="c"># the engine</span></div>
-        <div><span class="p">$</span> coworker-server <span class="c"># …and open the app</span></div>
+        <div><span class="p">$</span> git clone <a data-source-clone href="#">https://github.com/andrewyng/aisuite</a>.git</div>
+        <div><span class="p">$</span> cd aisuite</div>
+        <div><span class="c"># build &amp; run — see the README for current steps</span></div>
       </div>
     </div>
   </section>
@@ -498,7 +497,7 @@
   <div class="wrap">
     <span class="mono">✳ Open Coworker — v0.1 beta. It gets better every week.</span>
     <nav>
-      <a data-repo href="#">GitHub</a>
+      <a data-source href="#">GitHub</a>
       <a data-license href="#">License</a>
       <a href="terms/">Terms</a>
       <a data-issues href="#">Report an issue</a>
@@ -511,19 +510,17 @@
      Single place to point the page at the real repo + installers.
      Until real release artifacts exist, every button falls back to
      the releases page. */
-  const REPO = "https://github.com/rohitprasad15/ocw";        // website home (temporary)
   const SOURCE = "https://github.com/andrewyng/aisuite";      // the project's source repo
   const DOWNLOADS = {
-    mac: "https://github.com/andrewyng/aisuite/releases/latest/download/OpenCoworker-macos-arm64.dmg",
-    win: "https://github.com/andrewyng/aisuite/releases/latest/download/OpenCoworker-windows.msi",
+    mac: SOURCE + "/releases/latest/download/OpenCoworker-macos-arm64.dmg",
+    win: SOURCE + "/releases/latest/download/OpenCoworker-windows.msi",
   };
   /* ============================================================== */
 
   document.querySelectorAll("[data-source]").forEach(a => a.href = SOURCE);
-  document.querySelectorAll("[data-repo]").forEach(a => a.href = REPO);
-  document.querySelectorAll("[data-repo-clone]").forEach(a => { a.href = REPO; a.textContent = REPO; });
-  document.querySelectorAll("[data-license]").forEach(a => a.href = REPO + "/blob/main/LICENSE");
-  document.querySelectorAll("[data-issues]").forEach(a => a.href = REPO + "/issues");
+  document.querySelectorAll("[data-source-clone]").forEach(a => { a.href = SOURCE; a.textContent = SOURCE; });
+  document.querySelectorAll("[data-license]").forEach(a => a.href = SOURCE + "/blob/main/LICENSE");
+  document.querySelectorAll("[data-issues]").forEach(a => a.href = SOURCE + "/issues");
   document.querySelectorAll("[data-dl-mac]").forEach(a => a.href = DOWNLOADS.mac);
   document.querySelectorAll("[data-dl-win]").forEach(a => a.href = DOWNLOADS.win);
 

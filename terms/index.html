@@ -359,7 +359,7 @@
   <div class="wrap">
     <span class="mono">✳ Open Coworker</span>
     <nav>
-      <a data-repo href="#">GitHub</a>
+      <a data-source href="#">GitHub</a>
       <a data-license href="#">License</a>
       <a href="./">Terms</a>
       <a data-issues href="#">Report an issue</a>
@@ -369,13 +369,11 @@
 
 <script>
   /* Same CONFIG as the landing page — keep in sync. */
-  const REPO = "https://github.com/rohitprasad15/ocw";
   const SOURCE = "https://github.com/andrewyng/aisuite";
 
   document.querySelectorAll("[data-source]").forEach(a => a.href = SOURCE);
-  document.querySelectorAll("[data-repo]").forEach(a => a.href = REPO);
-  document.querySelectorAll("[data-license]").forEach(a => a.href = REPO + "/blob/main/LICENSE");
-  document.querySelectorAll("[data-issues]").forEach(a => a.href = REPO + "/issues");
+  document.querySelectorAll("[data-license]").forEach(a => a.href = SOURCE + "/blob/main/LICENSE");
+  document.querySelectorAll("[data-issues]").forEach(a => a.href = SOURCE + "/issues");
 </script>
 
 </body>
