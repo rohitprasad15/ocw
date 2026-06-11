@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Terms of Service — Open Coworker</title>
+<meta name="description" content="Terms of Service for the Open Coworker website and downloadable app." />
+<link rel="icon" type="image/png" href="../assets/icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,50&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --paper: #f6f1e7;
+    --paper-deep: #efe8d9;
+    --ink: #191712;
+    --ink-soft: #4f4a3f;
+    --ink-faint: #8a8273;
+    --cobalt: #2d63e8;
+    --cobalt-deep: #1f4cc0;
+    --hairline: rgba(25, 23, 18, 0.18);
+    --serif: "Fraunces", Georgia, serif;
+    --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; background: var(--paper); }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-weight: 340;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* paper grain */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 50;
+    opacity: 0.5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.035 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  ::selection { background: var(--cobalt); color: var(--paper); }
+
+  a { color: inherit; }
+
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 28px; }
+
+  .mono {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ---------- top bar ---------- */
+  header { border-bottom: 1px solid var(--hairline); }
+  .bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+  }
+  .wordmark {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 19px;
+    letter-spacing: -0.01em;
+  }
+  .wordmark img { width: 26px; height: 26px; border-radius: 6px; display: block; }
+  .bar nav { display: flex; gap: 26px; align-items: center; }
+  .bar nav a { text-decoration: none; color: var(--ink-soft); transition: color 0.15s ease; }
+  .bar nav a:hover { color: var(--cobalt); }
+
+  /* ---------- document ---------- */
+  .doc { padding: 72px 0 96px; }
+  .doc .sheet { max-width: 760px; }
+
+  .kicker {
+    color: var(--cobalt);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 26px;
+  }
+  .kicker::before { content: "✳"; font-size: 14px; letter-spacing: 0; }
+
+  h1 {
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 380;
+    line-height: 1.06;
+    letter-spacing: -0.02em;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+  }
+
+  .meta {
+    margin-top: 18px;
+    color: var(--ink-faint);
+    font-family: var(--mono);
+    font-size: 12.5px;
+    letter-spacing: 0.02em;
+  }
+
+  .preamble {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid var(--hairline);
+    color: var(--ink-soft);
+    font-size: 18px;
+  }
+
+  .doc h2 {
+    margin-top: 52px;
+    font-size: 26px;
+    font-weight: 460;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+  .doc h2 .num {
+    color: var(--cobalt);
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .doc p { margin-top: 14px; color: var(--ink-soft); }
+  .doc ul { margin: 14px 0 0 1.2em; color: var(--ink-soft); }
+  .doc li { margin-top: 8px; }
+  .doc strong { font-weight: 500; color: var(--ink); }
+  .doc a { color: var(--ink); text-decoration-color: var(--hairline); }
+  .doc a:hover { color: var(--cobalt); }
+
+  .doc .caps {
+    font-family: var(--mono);
+    font-size: 13px;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+    background: var(--paper-deep);
+    border: 1px solid var(--hairline);
+    padding: 18px 20px;
+    margin-top: 16px;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- footer ---------- */
+  footer { padding: 44px 0 60px; border-top: 1px solid var(--hairline); margin-top: 80px; }
+  footer .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  footer .mono { color: var(--ink-faint); letter-spacing: 0.08em; }
+  footer nav { display: flex; gap: 22px; }
+  footer nav a {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-decoration: none;
+  }
+  footer nav a:hover { color: var(--cobalt); }
+
+  @media (max-width: 560px) {
+    .doc { padding: 52px 0 64px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="wordmark" href="../">
+      <img src="../assets/icon.png" alt="" />
+      Open&nbsp;Coworker
+    </a>
+    <nav class="mono">
+      <a data-source href="#">GitHub ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc">
+  <div class="wrap">
+    <div class="sheet">
+      <div class="kicker mono">Legal</div>
+      <h1>Terms of Service</h1>
+      <p class="meta">Effective: June 11, 2026 · applies to opencoworker.app and the downloadable app</p>
+
+      <p class="preamble">
+        These terms are a contract between you and the maintainers of the Open Coworker
+        project (&ldquo;Open Coworker,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo;). They cover
+        this website and the pre-built copies of the app we distribute (together, the
+        &ldquo;Services&rdquo;). The Open Coworker <em>source code</em> is open source and
+        is governed solely by its own license — currently the
+        <a data-license href="#">MIT License</a> — not by these terms. By using the
+        Services, you agree to what follows.
+      </p>
+
+      <h2><span class="num">01</span>The software is open source — and free</h2>
+      <p>
+        Open Coworker is free software released under the MIT License. You may use, copy,
+        modify, and redistribute the source code under that license without reference to
+        these terms. These terms only add conditions for the website and the convenience
+        builds (installers) we publish; they never restrict rights the open-source license
+        grants you.
+      </p>
+      <p>
+        We don&rsquo;t charge for the app, and there are no accounts, subscriptions, or
+        in-app purchases. If that ever changes, we&rsquo;ll say so clearly before anything
+        costs money.
+      </p>
+
+      <h2><span class="num">02</span>You bring your own model provider</h2>
+      <p>
+        Open Coworker ships without an AI model and includes no credits or accounts.
+        <strong>The app will not work until you connect a model yourself.</strong> To use
+        it, you must obtain your own API key directly from a model provider — such as
+        OpenAI, Anthropic, or Google — and pay that provider for your usage under your own
+        agreement with them, or run a local model on your own hardware (for example, with
+        Ollama). That means:
+      </p>
+      <ul>
+        <li>Your use of any model provider is governed by <strong>your agreement with that provider</strong>, including their usage policies and pricing. Charges they bill you are between you and them.</li>
+        <li>Content you send through the app to a provider is handled under <strong>that provider&rsquo;s</strong> privacy and data-retention practices, which we don&rsquo;t control.</li>
+        <li>We are not responsible for the availability, accuracy, or behavior of any third-party model or service, and you release us from claims arising out of your use of them.</li>
+        <li>You are responsible for keeping your API keys secure. Keys you enter are stored locally on your machine.</li>
+      </ul>
+
+      <h2><span class="num">03</span>The app acts on your machine, at your direction</h2>
+      <p>
+        Open Coworker is an agent: at your instruction it can read and edit files on your
+        computer, run commands, and — when you connect them — send messages and emails
+        through your own accounts (for example Slack, Telegram, or email). You are the
+        operator. That means:
+      </p>
+      <ul>
+        <li>You are responsible for the tasks you delegate and for <strong>reviewing what the agent does</strong>, especially actions that are hard to undo — sending messages, deleting or overwriting files, or anything involving money or credentials.</li>
+        <li>Anything the app sends or changes through your connected accounts is treated as done by you, under your agreements with those services.</li>
+        <li>Keep backups of data you care about. Agents make mistakes.</li>
+      </ul>
+
+      <h2><span class="num">04</span>AI output can be wrong</h2>
+      <p>
+        Output generated by AI models may be inaccurate, incomplete, outdated, or biased,
+        and may resemble other people&rsquo;s content. Don&rsquo;t rely on it for
+        consequential decisions — legal, medical, financial, or safety-related — without
+        independent verification by a qualified human. As between you and us, you own your
+        input and, to the extent we hold any rights in it, the output you generate; you are
+        responsible for how you use both.
+      </p>
+
+      <h2><span class="num">05</span>Acceptable use</h2>
+      <p>When using the Services, you agree not to:</p>
+      <ul>
+        <li>violate any applicable law, or use the app to harm others or their systems;</li>
+        <li>infringe anyone&rsquo;s intellectual-property, privacy, or publicity rights;</li>
+        <li>misrepresent AI-generated output as human-created where that matters to the recipient;</li>
+        <li>attack, overload, or attempt to disrupt this website or our distribution infrastructure;</li>
+        <li>use the Services to develop, train, or operate systems in violation of your model provider&rsquo;s terms.</li>
+      </ul>
+
+      <h2><span class="num">06</span>Privacy</h2>
+      <p>
+        The app is local-first: it requires no account, and we collect no telemetry. Your
+        sessions, files, and the agent&rsquo;s memory stay on your machine, except for what
+        you choose to send to your model provider or through connectors you enable.
+      </p>
+      <p>
+        This website is hosted on GitHub Pages, which may log standard technical data
+        (such as IP addresses) under
+        <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" rel="noopener">GitHub&rsquo;s privacy statement</a>.
+        We don&rsquo;t run analytics on it.
+      </p>
+
+      <h2><span class="num">07</span>Changes to the Services and to these terms</h2>
+      <p>
+        Open Coworker is young software that changes quickly. We may modify, pause, or
+        discontinue any part of the Services at any time without liability to you — though
+        the open-source code, and your local copy of the app, remain yours to use under the
+        MIT License regardless.
+      </p>
+      <p>
+        We may also update these terms. When we do, we&rsquo;ll post the new version here
+        with a new effective date. If you keep using the Services after a change, that
+        means you accept it; if you don&rsquo;t agree, stop using the Services.
+      </p>
+
+      <h2><span class="num">08</span>Termination</h2>
+      <p>
+        You can stop using the Services at any time. We may suspend or block access to the
+        website or our distribution channels (for example, for abuse). Sections 02–05 and
+        09–11 survive termination. Your rights under the MIT License are independent of
+        these terms and are not affected.
+      </p>
+
+      <h2><span class="num">09</span>No warranty</h2>
+      <div class="caps">
+        THE SERVICES, THE APP, AND ALL CONTENT ARE PROVIDED &ldquo;AS IS&rdquo; AND
+        &ldquo;AS AVAILABLE,&rdquo; WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED,
+        INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
+        NON-INFRINGEMENT, ACCURACY, OR UNINTERRUPTED OR ERROR-FREE OPERATION. YOU USE
+        THE SERVICES AT YOUR OWN RISK.
+      </div>
+
+      <h2><span class="num">10</span>Limitation of liability</h2>
+      <div class="caps">
+        TO THE FULLEST EXTENT PERMITTED BY LAW, WE WILL NOT BE LIABLE FOR ANY INDIRECT,
+        INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR FOR LOST PROFITS,
+        DATA, OR GOODWILL, ARISING FROM OR RELATED TO THE SERVICES OR THE APP — INCLUDING
+        ACTIONS THE AGENT TAKES ON YOUR MACHINE OR THROUGH YOUR CONNECTED ACCOUNTS — EVEN
+        IF ADVISED OF THE POSSIBILITY. OUR TOTAL LIABILITY FOR ALL CLAIMS WILL NOT EXCEED
+        ONE HUNDRED U.S. DOLLARS (US$100) OR THE AMOUNT YOU PAID US IN THE PAST TWELVE
+        MONTHS, WHICHEVER IS GREATER. SOME JURISDICTIONS DO NOT ALLOW CERTAIN LIMITATIONS,
+        SO PARTS OF THIS SECTION MAY NOT APPLY TO YOU.
+      </div>
+
+      <h2><span class="num">11</span>Indemnity, governing law, and the rest</h2>
+      <p>
+        You agree to indemnify us against claims arising from your use of the Services in
+        violation of these terms or of applicable law, including reasonable
+        attorneys&rsquo; fees.
+      </p>
+      <p>
+        These terms are governed by the laws of the State of California, USA, without
+        regard to conflict-of-laws rules, and disputes will be brought in the state or
+        federal courts located in California. If any provision is found unenforceable, the
+        rest remains in effect. Our not enforcing a provision is not a waiver. These terms
+        are the entire agreement between you and us about the Services, and you may not
+        assign them without our consent.
+      </p>
+
+      <h2><span class="num">12</span>Contact</h2>
+      <p>
+        Questions about these terms? Open an issue on
+        <a data-issues href="#">GitHub</a> — it&rsquo;s the fastest way to reach the
+        maintainers.
+      </p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="mono">✳ Open Coworker</span>
+    <nav>
+      <a data-repo href="#">GitHub</a>
+      <a data-license href="#">License</a>
+      <a href="./">Terms</a>
+      <a data-issues href="#">Report an issue</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  /* Same CONFIG as the landing page — keep in sync. */
+  const REPO = "https://github.com/rohitprasad15/ocw";
+  const SOURCE = "https://github.com/andrewyng/aisuite";
+
+  document.querySelectorAll("[data-source]").forEach(a => a.href = SOURCE);
+  document.querySelectorAll("[data-repo]").forEach(a => a.href = REPO);
+  document.querySelectorAll("[data-license]").forEach(a => a.href = REPO + "/blob/main/LICENSE");
+  document.querySelectorAll("[data-issues]").forEach(a => a.href = REPO + "/issues");
+</script>
+
+</body>
+</html>
